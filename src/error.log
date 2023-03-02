@@ -1,0 +1,92 @@
+ 2/3/2023, 10:55:01 am [31merror[39m: Error: 
+Invalid `prisma.user.findMany()` invocation in
+D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\services\user.service.js:15:34
+
+  12 };
+  13 
+  14 const getusers = async () => {
+→ 15   const user = await prisma.user.findMany(
+error: Error validating datasource `db`: the URL must start with the protocol `postgresql://` or `postgres://`.
+  -->  schema.prisma:8
+   | 
+ 7 |   provider = "postgresql"
+ 8 |   url      = env("DATABASE_URL")
+   | 
+
+Validation Error Count: 1
+    at RequestHandler.handleRequestError (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:34883:13)
+    at RequestHandler.handleAndLogRequestError (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:34841:12)
+    at D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:35387:25
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async PrismaClient._executeRequest (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:35955:22)
+    at async PrismaClient._request (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:35926:16)
+    at async Object.getusers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\services\user.service.js:15:16)
+    at async getUsers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\controllers\user.controller.js:11:16)
+ 2/3/2023, 11:17:55 am [31merror[39m: MulterError: Unexpected field
+    at wrappedFileFilter (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:513:28)
+    at Multipart.emit (node:domain:489:12)
+    at HeaderParser.cb (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\streamsearch\lib\sbmh.js:219:14)
+    at SBMH.push (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:391:12)
+    at _write (node:internal/streams/writable:332:10)
+    at Multipart.Writable.write (node:internal/streams/writable:336:10)
+    at IncomingMessage.ondata (node:internal/streams/readable:754:22)
+    at IncomingMessage.emit (node:events:513:28)
+    at IncomingMessage.emit (node:domain:489:12)
+ 2/3/2023, 11:17:55 am [31merror[39m: POST /v1/fileserver/uploadFile 400 - 19.731 ms - message: Unexpected field
+ 2/3/2023, 11:25:12 am [31merror[39m: TypeError: this.engine.dmmf is not a function
+    at oo.getDmmf (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:193:3584)
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3072
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3476
+    at async t._executeRequest (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:11016)
+    at async t._request (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:10745)
+    at async Object.getusers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\services\user.service.js:15:16)
+    at async getUsers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\controllers\user.controller.js:11:16)
+ 2/3/2023, 11:25:28 am [31merror[39m: TypeError: this.engine.dmmf is not a function
+    at oo.getDmmf (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:193:3584)
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3072
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3476
+    at async t._executeRequest (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:11016)
+    at async t._request (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:10745)
+    at async Object.getusers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\services\user.service.js:15:16)
+    at async getUsers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\controllers\user.controller.js:11:16)
+ 2/3/2023, 11:27:28 am [31merror[39m: TypeError: this.engine.dmmf is not a function
+    at oo.getDmmf (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:193:3584)
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3072
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3476
+    at async t._executeRequest (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:11016)
+    at async t._request (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:10745)
+    at async Object.getusers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\services\user.service.js:15:16)
+    at async getUsers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\controllers\user.controller.js:11:16)
+ 2/3/2023, 11:28:18 am [31merror[39m: TypeError: this.engine.dmmf is not a function
+    at oo.getDmmf (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:193:3584)
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3072
+    at async D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:3476
+    at async t._executeRequest (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:11016)
+    at async t._request (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\@prisma\client\runtime\index.js:266:10745)
+    at async Object.getusers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\services\user.service.js:15:16)
+    at async getUsers (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\src\controllers\user.controller.js:11:16)
+ 2/3/2023, 11:41:20 am [31merror[39m: MulterError: Unexpected field
+    at wrappedFileFilter (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\multer\index.js:40:19)
+    at Multipart.<anonymous> (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\multer\lib\make-middleware.js:107:7)
+    at Multipart.emit (node:events:513:28)
+    at Multipart.emit (node:domain:489:12)
+    at HeaderParser.cb (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:358:14)
+    at HeaderParser.push (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:162:20)
+    at SBMH.ssCb [as _cb] (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:394:37)
+    at feed (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\streamsearch\lib\sbmh.js:248:10)
+    at SBMH.push (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\streamsearch\lib\sbmh.js:104:16)
+    at Multipart._write (D:\Iyappan\Boiler-Plate\Express-Prisma-Mongodb\node_modules\busboy\lib\types\multipart.js:567:19)
+    at writeOrBuffer (node:internal/streams/writable:391:12)
+    at _write (node:internal/streams/writable:332:10)
+    at Multipart.Writable.write (node:internal/streams/writable:336:10)
+    at IncomingMessage.ondata (node:internal/streams/readable:754:22)
+    at IncomingMessage.emit (node:events:513:28)
+    at IncomingMessage.emit (node:domain:489:12)
+ 2/3/2023, 11:41:20 am [31merror[39m: POST /v1/fileserver/uploadFile 400 - 9.843 ms - message: Unexpected field
