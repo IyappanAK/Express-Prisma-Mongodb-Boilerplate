@@ -17,11 +17,12 @@ model Post {
 }
 
 model User {
-  id      String   @id @default(auto()) @map("_id") @db.ObjectId
-  email   String   @unique
-  name    String?
-  address Address?
-  posts   Post[]
+  id       String   @id @default(auto()) @map("_id") @db.ObjectId
+  email    String   @unique
+  name     String?
+  password String?
+  address  Address?
+  posts    Post[]
 }
 
 // Address is an embedded document
@@ -30,4 +31,20 @@ type Address {
   city   String
   state  String
   zip    String
+}
+
+model Token {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  token       String
+  user        String
+  type        TokenType
+  expires     DateTime  @default(now()) @map("expires")
+  blacklisted Boolean   @default(false)
+  createdAt   DateTime  @default(now()) @map("created_at")
+}
+
+enum TokenType {
+  refresh
+  resetPassword
+  verifyEmail
 }
