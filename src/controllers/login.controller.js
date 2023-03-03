@@ -15,11 +15,7 @@ const loginByEmailPassword = catchAsync(async (req, res) => {
     responce.token = await tokenService.generateAuthTokens(responce.userInfo);
     res.send(responce);
   }
-
-  res.status(400).send({
-    message: 'invalid username and password',
-  });
-  throw new ApiError(httpStatus[400], 'invalid username and password');
+  throw new ApiError(httpStatus.BAD_REQUEST, 'invalid username and password');
 });
 
 const verifyByEmail = catchAsync(async (req, res) => {
