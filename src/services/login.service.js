@@ -10,11 +10,10 @@ const httpStatus = require('http-status');
 
 const verify = async (loginBody) => {
   const { email, password } = loginBody;
-  const encryptpassword = await encrypt(password);
-  const cryptpassword = await decrypt('password');
+  // const encryptpassword = await encrypt(password);
+  // const cryptpassword = await decrypt('password');
   const responce = await prisma.user.findFirst({
-    where: { email: email, password: encryptpassword },
-    include: { team: true, role: true },
+    where: { email: email, password: password },
   });
   return responce ? responce : false;
 };

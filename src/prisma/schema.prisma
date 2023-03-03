@@ -34,13 +34,13 @@ type Address {
 }
 
 model Token {
-  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  id          String     @id @default(auto()) @map("_id") @db.ObjectId
   token       String
   user        String
-  type        TokenType
-  expires     DateTime  @default(now()) @map("expires")
-  blacklisted Boolean   @default(false)
-  createdAt   DateTime  @default(now()) @map("created_at")
+  type        TokenType?
+  expires     DateTime   @default(now()) @map("expires")
+  blacklisted Boolean    @default(false)
+  createdAt   DateTime   @default(now()) @map("created_at")
 }
 
 enum TokenType {
